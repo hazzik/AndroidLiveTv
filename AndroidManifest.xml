@@ -106,7 +106,12 @@
         <activity android:name=".SelectInputActivity"
             android:configChanges="keyboard|keyboardHidden"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.SelectInputActivity" />
+            android:theme="@style/Theme.SelectInputActivity">
+            <intent-filter>
+                <action android:name="android.mtk.intent.action.ACTION_REQUEST_TOP_RESUME"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".onboarding.OnboardingActivity"
             android:configChanges="keyboard|keyboardHidden"
